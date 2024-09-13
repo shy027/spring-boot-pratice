@@ -1,0 +1,7 @@
+logging:
+  level:
+    root: info
+    top.shy.springboot.thymeleaf: debug
+spring:
+  thymeleaf:
+    cache: false

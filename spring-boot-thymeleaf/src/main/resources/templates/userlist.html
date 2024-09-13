@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>User List</title>
+</head>
+<style>
+    body{
+        background-color: rgba(0,0,0,0.1);
+    }
+    .d1{
+        margin: auto;
+        text-align: center;
+        border-radius: 5px;
+        width: 60%;
+        background-color: white;
+        box-shadow: #333333 2px 2px;
+        padding-top: 20px;
+        padding-bottom: 20px;
+    }
+    h1{
+        margin-left: auto;
+        font-size: 50px;
+        margin-top: 10px;
+    }
+    table{
+        margin: auto;
+        font-size: 20px;
+        border-color: #333333;
+        text-align: center;
+    }
+    th{
+        width: 300px;
+        height: 50px;
+    }
+    .fir{
+        background-color: rgba(0,0,0,0.1);
+    }
+    .dec{
+        width: 300px;
+        height: 50px;
+    }
+    #in1,#in2{
+        height: 30px;
+    }
+    button{
+        border-color: #333333;
+        width: 80px;
+        height: 40px;
+        background-color: #1a73e8;
+        color: white;
+        border-radius: 5px;
+    }
+    button:hover{
+        cursor: pointer;
+    }
+    .d2{
+        margin-top: 20px;
+     }
+</style>
+<body>
+<div class="d1">
+    <h1>用户列表</h1>
+    <table>
+        <th class="fir">ID</th>
+        <th class="fir">姓名</th>
+        <th class="fir">电子邮箱</th>
+        <tr th:each="user : ${users}">
+            <td th:text="${user.id}" class="dec"></td>
+            <td th:text="${user.name}" class="dec"></td>
+            <td th:text="${user.email}" class="dec"></td>
+        </tr>
+    </table>
+    <div class="d2">
+        <form action="/addUser" method="post">
+            <input type="text" name="name" placeholder="请输入用户姓名" id="in1">
+            <input type="text" name="email" placeholder="请输入用户邮箱" id="in2">
+            <button type="submit">添加用户</button>
+        </form>
+    </div>
+</div>
+
+
+</body>
+</html>

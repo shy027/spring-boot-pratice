@@ -12,6 +12,10 @@ public class Meeting {
         this.starttime = starttime;
         this.endtime = endtime;
     }
+    public boolean isOverlapping(Meeting other) {
+        return this.date.equals(other.date) &&
+                (this.starttime.isBefore(other.endtime) && this.endtime.isAfter(other.starttime));
+    }
 
     private LocalDate date;
     private LocalTime starttime;
@@ -49,8 +53,5 @@ public class Meeting {
         this.endtime = endtime;
     }
 
-    public boolean isOverlapping(Meeting other) {
-        return this.date.equals(other.date) &&
-                (this.starttime.isBefore(other.endtime) && this.endtime.isAfter(other.starttime));
-    }
+
 }

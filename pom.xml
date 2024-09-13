@@ -16,6 +16,8 @@
     <description>spring-boot-pratice</description>
     <modules>
         <module>spring-boot-quickstart</module>
+        <module>spring-boot-thymeleaf</module>
+        <module>spring-boot-logging</module>
     </modules>
     <packaging>pom</packaging>
 
