@@ -1,0 +1,66 @@
+server:
+  host: "localhost"
+  port: 8080
+  context-path: "/api"
+#family:
+#  family-name: "family"
+#  father: ${father.name:zhangsan}
+#  mother: "Rose"
+#  child: "Tom"
+#  age: ${random.int(1,30)}
+#father:
+#  name: "张三"
+#person:
+#  first-name: ${first-name.name:John}
+#  last-name: ${last-name.name:Doe}
+#  age: ${random.int(20,50)}
+#  id: ${random.uuid}
+#  phone: ${phone.number:1234567890}
+student:
+  name: 张小飞
+  age: 20
+  happy: true
+  bitrh: 2004/01/01
+  map: {k1: v1, k2: v2}
+  list:
+    - code
+    - read
+    - music
+  dog:
+    name: 虎子
+    age: 11
+
+
+db:
+  url: jdbc:mysql://127.0.0.1:3306/spring_boot?useUnicode=true&characterEncoding=utf-8&useSSL=false&allowMultiQueries=true
+  username: root
+  password: password
+  driver-class-name: com.mysql.cj.jdbc.Driver
+
+jwt:
+  secret: helloworld
+  expiration: 3600000
+
+custom:
+  qrcode:
+    content: "https://www.baidu.com"
+  log:
+    level: "INFO"
+  backup:
+    location: E:\hou\backup.log
+
+spring:
+  mail:
+    host: smtp.qq.com
+    username: 1533103845@qq.com
+    password: fxqhjgiymakogcbj
+    properties:
+      mail.smtp.auth: true
+      mail.smtp.starttls.enable: true
+
+aliyun:
+  oss:
+    endpoint: oss-cn-nanjing.aliyuncs.com
+    accessKeyId: LTAI5t84FwGsGxU3CLAvGYDu
+    accessKeySecret: YDudthWnZmUXj5t6hqnkYEjMf7uaQs
+    bucketName: class-practice
