@@ -1,0 +1,21 @@
+logging:
+  level:
+    root: info
+    top.shy.springboot.logging.Controller: debug
+  file:
+    name: ./logs/my-log.log
+    logback:
+      rollingpolicy:
+        max-file-size:10MB
+        max-history:10
+      pattern:
+        console: '%red(%d{yyyy-MM-dd HH:mm:ss}) %green([%thread]) %highlight(%-5level) %boldMagenta(%logger{10}) - %cyan(%msg%n)'
+        file: '%d{yyyy-MM-dd HH:mm:ss.SSS} %-5level [%thread] %logger : %msg%n'
+aliyun:
+  oss:
+    endpoint: oss-cn-nanjing.aliyuncs.com
+    accessKeyId: LTAI5t84FwGsGxU3CLAvGYDu
+    accessKeySecret: YDudthWnZmUXj5t6hqnkYEjMf7uaQs
+    bucketName: class-practice
+
+

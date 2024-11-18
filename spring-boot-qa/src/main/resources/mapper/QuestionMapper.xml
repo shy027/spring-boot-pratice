@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="top.shy.springboot.qa.mapper.QuestionMapper">
+    <select id="selectAll" resultType="Question">
+        SELECT *
+        FROM question
+        ORDER BY time DESC
+    </select>
+    <select id="selectByPage" resultType="question">
+        SELECT *
+        FROM question
+        ORDER BY time DESC
+        LIMIT #{limit} OFFSET #{offset}
+    </select>
+    <insert id="insertQuestion" parameterType="Question">
+        INSERT INTO question (user_id, content,user_name,time)
+        VALUES (#{userId},#{content},#{userName},#{time})
+    </insert>
+</mapper>

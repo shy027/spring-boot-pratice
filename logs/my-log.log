@@ -1,0 +1,476 @@
+2024-11-05T13:47:48.426+08:00  INFO 18736 --- [restartedMain] t.s.s.filter_interceptor.Application     : Starting Application using Java 17.0.4 with PID 18736 (E:\hou\spring-boot-pratice\spring-boot-filter-interceptor\target\classes started by 15331 in E:\hou\spring-boot-pratice)
+2024-11-05T13:47:48.436+08:00  INFO 18736 --- [restartedMain] t.s.s.filter_interceptor.Application     : No active profile set, falling back to 1 default profile: "default"
+2024-11-05T13:47:48.497+08:00  INFO 18736 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2024-11-05T13:47:48.497+08:00  INFO 18736 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2024-11-05T13:47:48.630+08:00  WARN 18736 --- [restartedMain] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanDefinitionStoreException: I/O failure while processing configuration class [top.shy.springboot.filter_interceptor.config.OssConfig]
+2024-11-05T13:47:48.666+08:00 ERROR 18736 --- [restartedMain] o.s.boot.SpringApplication               : Application run failed
+
+org.springframework.beans.factory.BeanDefinitionStoreException: I/O failure while processing configuration class [top.shy.springboot.filter_interceptor.config.OssConfig]
+	at org.springframework.context.annotation.ConfigurationClassParser.processConfigurationClass(ConfigurationClassParser.java:251) ~[spring-context-6.1.12.jar:6.1.12]
+	at org.springframework.context.annotation.ConfigurationClassParser.parse(ConfigurationClassParser.java:189) ~[spring-context-6.1.12.jar:6.1.12]
+	at org.springframework.context.annotation.ConfigurationClassParser.doProcessConfigurationClass(ConfigurationClassParser.java:314) ~[spring-context-6.1.12.jar:6.1.12]
+	at org.springframework.context.annotation.ConfigurationClassParser.processConfigurationClass(ConfigurationClassParser.java:246) ~[spring-context-6.1.12.jar:6.1.12]
+	at org.springframework.context.annotation.ConfigurationClassParser.parse(ConfigurationClassParser.java:197) ~[spring-context-6.1.12.jar:6.1.12]
+	at org.springframework.context.annotation.ConfigurationClassParser.parse(ConfigurationClassParser.java:165) ~[spring-context-6.1.12.jar:6.1.12]
+	at org.springframework.context.annotation.ConfigurationClassPostProcessor.processConfigBeanDefinitions(ConfigurationClassPostProcessor.java:417) ~[spring-context-6.1.12.jar:6.1.12]
+	at org.springframework.context.annotation.ConfigurationClassPostProcessor.postProcessBeanDefinitionRegistry(ConfigurationClassPostProcessor.java:290) ~[spring-context-6.1.12.jar:6.1.12]
+	at org.springframework.context.support.PostProcessorRegistrationDelegate.invokeBeanDefinitionRegistryPostProcessors(PostProcessorRegistrationDelegate.java:349) ~[spring-context-6.1.12.jar:6.1.12]
+	at org.springframework.context.support.PostProcessorRegistrationDelegate.invokeBeanFactoryPostProcessors(PostProcessorRegistrationDelegate.java:118) ~[spring-context-6.1.12.jar:6.1.12]
+	at org.springframework.context.support.AbstractApplicationContext.invokeBeanFactoryPostProcessors(AbstractApplicationContext.java:789) ~[spring-context-6.1.12.jar:6.1.12]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:607) ~[spring-context-6.1.12.jar:6.1.12]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146) ~[spring-boot-3.3.3.jar:3.3.3]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:754) ~[spring-boot-3.3.3.jar:3.3.3]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:456) ~[spring-boot-3.3.3.jar:3.3.3]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:335) ~[spring-boot-3.3.3.jar:3.3.3]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1363) ~[spring-boot-3.3.3.jar:3.3.3]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1352) ~[spring-boot-3.3.3.jar:3.3.3]
+	at top.shy.springboot.filter_interceptor.Application.main(Application.java:9) ~[classes/:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568) ~[na:na]
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:50) ~[spring-boot-devtools-3.3.3.jar:3.3.3]
+Caused by: java.io.FileNotFoundException: class path resource [aliyun-oss.properties] cannot be opened because it does not exist
+	at org.springframework.core.io.ClassPathResource.getInputStream(ClassPathResource.java:215) ~[spring-core-6.1.12.jar:6.1.12]
+	at org.springframework.core.io.support.EncodedResource.getInputStream(EncodedResource.java:160) ~[spring-core-6.1.12.jar:6.1.12]
+	at org.springframework.core.io.support.PropertiesLoaderUtils.fillProperties(PropertiesLoaderUtils.java:100) ~[spring-core-6.1.12.jar:6.1.12]
+	at org.springframework.core.io.support.PropertiesLoaderUtils.fillProperties(PropertiesLoaderUtils.java:74) ~[spring-core-6.1.12.jar:6.1.12]
+	at org.springframework.core.io.support.PropertiesLoaderUtils.loadProperties(PropertiesLoaderUtils.java:60) ~[spring-core-6.1.12.jar:6.1.12]
+	at org.springframework.core.io.support.ResourcePropertySource.<init>(ResourcePropertySource.java:67) ~[spring-core-6.1.12.jar:6.1.12]
+	at org.springframework.core.io.support.DefaultPropertySourceFactory.createPropertySource(DefaultPropertySourceFactory.java:37) ~[spring-core-6.1.12.jar:6.1.12]
+	at org.springframework.core.io.support.PropertySourceProcessor.processPropertySource(PropertySourceProcessor.java:92) ~[spring-core-6.1.12.jar:6.1.12]
+	at org.springframework.context.annotation.PropertySourceRegistry.processPropertySource(PropertySourceRegistry.java:75) ~[spring-context-6.1.12.jar:6.1.12]
+	at org.springframework.context.annotation.ConfigurationClassParser.doProcessConfigurationClass(ConfigurationClassParser.java:281) ~[spring-context-6.1.12.jar:6.1.12]
+	at org.springframework.context.annotation.ConfigurationClassParser.processConfigurationClass(ConfigurationClassParser.java:246) ~[spring-context-6.1.12.jar:6.1.12]
+	... 23 common frames omitted
+
+2024-11-05T13:58:00.486+08:00  INFO 36932 --- [restartedMain] t.s.s.filter_interceptor.Application     : Starting Application using Java 17.0.4 with PID 36932 (E:\hou\spring-boot-pratice\spring-boot-filter-interceptor\target\classes started by 15331 in E:\hou\spring-boot-pratice)
+2024-11-05T13:58:00.490+08:00  INFO 36932 --- [restartedMain] t.s.s.filter_interceptor.Application     : No active profile set, falling back to 1 default profile: "default"
+2024-11-05T13:58:00.542+08:00  INFO 36932 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2024-11-05T13:58:00.543+08:00  INFO 36932 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2024-11-05T13:58:01.395+08:00  INFO 36932 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2024-11-05T13:58:01.406+08:00  INFO 36932 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-11-05T13:58:01.407+08:00  INFO 36932 --- [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.28]
+2024-11-05T13:58:01.453+08:00  INFO 36932 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-11-05T13:58:01.453+08:00  INFO 36932 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 910 ms
+2024-11-05T13:58:02.037+08:00  INFO 36932 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2024-11-05T13:58:02.071+08:00  INFO 36932 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2024-11-05T13:58:02.079+08:00  INFO 36932 --- [restartedMain] t.s.s.filter_interceptor.Application     : Started Application in 1.993 seconds (process running for 2.533)
+2024-11-05T13:59:26.873+08:00  INFO 36932 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-11-05T13:59:26.873+08:00  INFO 36932 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2024-11-05T13:59:26.875+08:00  INFO 36932 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+2024-11-05T13:59:26.915+08:00  WARN 36932 --- [http-nio-8080-exec-1] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.web.multipart.MaxUploadSizeExceededException: Maximum upload size exceeded]
+2024-11-05T13:59:26.922+08:00  WARN 36932 --- [http-nio-8080-exec-1] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.web.multipart.MaxUploadSizeExceededException: Maximum upload size exceeded]
+2024-11-05T14:00:29.310+08:00  INFO 29276 --- [restartedMain] t.s.s.filter_interceptor.Application     : Starting Application using Java 17.0.4 with PID 29276 (E:\hou\spring-boot-pratice\spring-boot-filter-interceptor\target\classes started by 15331 in E:\hou\spring-boot-pratice)
+2024-11-05T14:00:29.314+08:00  INFO 29276 --- [restartedMain] t.s.s.filter_interceptor.Application     : No active profile set, falling back to 1 default profile: "default"
+2024-11-05T14:00:29.367+08:00  INFO 29276 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2024-11-05T14:00:29.367+08:00  INFO 29276 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2024-11-05T14:00:30.139+08:00  INFO 29276 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2024-11-05T14:00:30.150+08:00  INFO 29276 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-11-05T14:00:30.150+08:00  INFO 29276 --- [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.28]
+2024-11-05T14:00:30.194+08:00  INFO 29276 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-11-05T14:00:30.194+08:00  INFO 29276 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 827 ms
+2024-11-05T14:00:30.614+08:00  INFO 29276 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2024-11-05T14:00:30.640+08:00  INFO 29276 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2024-11-05T14:00:30.646+08:00  INFO 29276 --- [restartedMain] t.s.s.filter_interceptor.Application     : Started Application in 1.751 seconds (process running for 2.307)
+2024-11-05T14:00:36.672+08:00  INFO 29276 --- [http-nio-8080-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-11-05T14:00:36.672+08:00  INFO 29276 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2024-11-05T14:00:36.673+08:00  INFO 29276 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2024-11-05T14:00:36.708+08:00  WARN 29276 --- [http-nio-8080-exec-2] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.web.multipart.MaxUploadSizeExceededException: Maximum upload size exceeded]
+2024-11-05T14:00:36.711+08:00  WARN 29276 --- [http-nio-8080-exec-2] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.web.multipart.MaxUploadSizeExceededException: Maximum upload size exceeded]
+2024-11-05T14:01:31.070+08:00  INFO 29276 --- [http-nio-8080-exec-4] t.s.s.f.interceptor.LoggingInterceptor   : 请求已经到达拦截器：path:/upload,clientIp=0:0:0:0:0:0:0:1,beginTime=2024-11-05T14:01:31.070040
+2024-11-05T14:01:31.074+08:00 ERROR 29276 --- [http-nio-8080-exec-4] o.a.c.c.C.[.[.[/].[dispatcherServlet]    : Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed: java.lang.NullPointerException: Cannot invoke "org.springframework.web.multipart.MultipartFile.getContentType()" because "file" is null] with root cause
+
+java.lang.NullPointerException: Cannot invoke "org.springframework.web.multipart.MultipartFile.getContentType()" because "file" is null
+	at top.shy.springboot.filter_interceptor.interceptor.UploadInterceptor.preHandle(UploadInterceptor.java:40) ~[classes/:na]
+	at org.springframework.web.servlet.HandlerExecutionChain.applyPreHandle(HandlerExecutionChain.java:146) ~[spring-webmvc-6.1.12.jar:6.1.12]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1084) ~[spring-webmvc-6.1.12.jar:6.1.12]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:979) ~[spring-webmvc-6.1.12.jar:6.1.12]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1014) ~[spring-webmvc-6.1.12.jar:6.1.12]
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:914) ~[spring-webmvc-6.1.12.jar:6.1.12]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:590) ~[tomcat-embed-core-10.1.28.jar:6.0]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885) ~[spring-webmvc-6.1.12.jar:6.1.12]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658) ~[tomcat-embed-core-10.1.28.jar:6.0]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:195) ~[tomcat-embed-core-10.1.28.jar:10.1.28]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.28.jar:10.1.28]
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51) ~[tomcat-embed-websocket-10.1.28.jar:10.1.28]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164) ~[tomcat-embed-core-10.1.28.jar:10.1.28]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.28.jar:10.1.28]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) ~[spring-web-6.1.12.jar:6.1.12]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.1.12.jar:6.1.12]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164) ~[tomcat-embed-core-10.1.28.jar:10.1.28]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.28.jar:10.1.28]
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) ~[spring-web-6.1.12.jar:6.1.12]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.1.12.jar:6.1.12]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164) ~[tomcat-embed-core-10.1.28.jar:10.1.28]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.28.jar:10.1.28]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201) ~[spring-web-6.1.12.jar:6.1.12]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.1.12.jar:6.1.12]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164) ~[tomcat-embed-core-10.1.28.jar:10.1.28]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.28.jar:10.1.28]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167) ~[tomcat-embed-core-10.1.28.jar:10.1.28]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90) ~[tomcat-embed-core-10.1.28.jar:10.1.28]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:483) ~[tomcat-embed-core-10.1.28.jar:10.1.28]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115) ~[tomcat-embed-core-10.1.28.jar:10.1.28]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93) ~[tomcat-embed-core-10.1.28.jar:10.1.28]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74) ~[tomcat-embed-core-10.1.28.jar:10.1.28]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:344) ~[tomcat-embed-core-10.1.28.jar:10.1.28]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:384) ~[tomcat-embed-core-10.1.28.jar:10.1.28]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63) ~[tomcat-embed-core-10.1.28.jar:10.1.28]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:904) ~[tomcat-embed-core-10.1.28.jar:10.1.28]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1741) ~[tomcat-embed-core-10.1.28.jar:10.1.28]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52) ~[tomcat-embed-core-10.1.28.jar:10.1.28]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1190) ~[tomcat-embed-core-10.1.28.jar:10.1.28]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659) ~[tomcat-embed-core-10.1.28.jar:10.1.28]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63) ~[tomcat-embed-core-10.1.28.jar:10.1.28]
+	at java.base/java.lang.Thread.run(Thread.java:833) ~[na:na]
+
+2024-11-05T14:01:31.079+08:00  INFO 29276 --- [http-nio-8080-exec-4] t.s.s.f.interceptor.LoggingInterceptor   : 请求已经到达拦截器：path:/error,clientIp=0:0:0:0:0:0:0:1,beginTime=2024-11-05T14:01:31.079559600
+2024-11-05T14:01:31.080+08:00 ERROR 29276 --- [http-nio-8080-exec-4] o.a.c.c.C.[.[.[/].[dispatcherServlet]    : Servlet.service() for servlet [dispatcherServlet] threw exception
+
+java.lang.NullPointerException: Cannot invoke "org.springframework.web.multipart.MultipartFile.getContentType()" because "file" is null
+	at top.shy.springboot.filter_interceptor.interceptor.UploadInterceptor.preHandle(UploadInterceptor.java:40) ~[classes/:na]
+	at org.springframework.web.servlet.HandlerExecutionChain.applyPreHandle(HandlerExecutionChain.java:146) ~[spring-webmvc-6.1.12.jar:6.1.12]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1084) ~[spring-webmvc-6.1.12.jar:6.1.12]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:979) ~[spring-webmvc-6.1.12.jar:6.1.12]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1014) ~[spring-webmvc-6.1.12.jar:6.1.12]
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:914) ~[spring-webmvc-6.1.12.jar:6.1.12]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:590) ~[tomcat-embed-core-10.1.28.jar:6.0]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885) ~[spring-webmvc-6.1.12.jar:6.1.12]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658) ~[tomcat-embed-core-10.1.28.jar:6.0]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:195) ~[tomcat-embed-core-10.1.28.jar:10.1.28]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.28.jar:10.1.28]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) ~[spring-web-6.1.12.jar:6.1.12]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.1.12.jar:6.1.12]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164) ~[tomcat-embed-core-10.1.28.jar:10.1.28]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.28.jar:10.1.28]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:101) ~[spring-web-6.1.12.jar:6.1.12]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164) ~[tomcat-embed-core-10.1.28.jar:10.1.28]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.28.jar:10.1.28]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:101) ~[spring-web-6.1.12.jar:6.1.12]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164) ~[tomcat-embed-core-10.1.28.jar:10.1.28]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.28.jar:10.1.28]
+	at org.apache.catalina.core.ApplicationDispatcher.invoke(ApplicationDispatcher.java:632) ~[tomcat-embed-core-10.1.28.jar:10.1.28]
+	at org.apache.catalina.core.ApplicationDispatcher.processRequest(ApplicationDispatcher.java:410) ~[tomcat-embed-core-10.1.28.jar:10.1.28]
+	at org.apache.catalina.core.ApplicationDispatcher.doForward(ApplicationDispatcher.java:330) ~[tomcat-embed-core-10.1.28.jar:10.1.28]
+	at org.apache.catalina.core.ApplicationDispatcher.forward(ApplicationDispatcher.java:267) ~[tomcat-embed-core-10.1.28.jar:10.1.28]
+	at org.apache.catalina.core.StandardHostValve.custom(StandardHostValve.java:362) ~[tomcat-embed-core-10.1.28.jar:10.1.28]
+	at org.apache.catalina.core.StandardHostValve.status(StandardHostValve.java:222) ~[tomcat-embed-core-10.1.28.jar:10.1.28]
+	at org.apache.catalina.core.StandardHostValve.throwable(StandardHostValve.java:308) ~[tomcat-embed-core-10.1.28.jar:10.1.28]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:149) ~[tomcat-embed-core-10.1.28.jar:10.1.28]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93) ~[tomcat-embed-core-10.1.28.jar:10.1.28]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74) ~[tomcat-embed-core-10.1.28.jar:10.1.28]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:344) ~[tomcat-embed-core-10.1.28.jar:10.1.28]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:384) ~[tomcat-embed-core-10.1.28.jar:10.1.28]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63) ~[tomcat-embed-core-10.1.28.jar:10.1.28]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:904) ~[tomcat-embed-core-10.1.28.jar:10.1.28]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1741) ~[tomcat-embed-core-10.1.28.jar:10.1.28]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52) ~[tomcat-embed-core-10.1.28.jar:10.1.28]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1190) ~[tomcat-embed-core-10.1.28.jar:10.1.28]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659) ~[tomcat-embed-core-10.1.28.jar:10.1.28]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63) ~[tomcat-embed-core-10.1.28.jar:10.1.28]
+	at java.base/java.lang.Thread.run(Thread.java:833) ~[na:na]
+
+2024-11-05T14:01:31.081+08:00 ERROR 29276 --- [http-nio-8080-exec-4] o.a.c.c.C.[Tomcat].[localhost]           : Exception Processing [ErrorPage[errorCode=0, location=/error]]
+
+jakarta.servlet.ServletException: Request processing failed: java.lang.NullPointerException: Cannot invoke "org.springframework.web.multipart.MultipartFile.getContentType()" because "file" is null
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1022) ~[spring-webmvc-6.1.12.jar:6.1.12]
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:914) ~[spring-webmvc-6.1.12.jar:6.1.12]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:590) ~[tomcat-embed-core-10.1.28.jar:6.0]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885) ~[spring-webmvc-6.1.12.jar:6.1.12]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658) ~[tomcat-embed-core-10.1.28.jar:6.0]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:195) ~[tomcat-embed-core-10.1.28.jar:10.1.28]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.28.jar:10.1.28]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) ~[spring-web-6.1.12.jar:6.1.12]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.1.12.jar:6.1.12]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164) ~[tomcat-embed-core-10.1.28.jar:10.1.28]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.28.jar:10.1.28]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:101) ~[spring-web-6.1.12.jar:6.1.12]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164) ~[tomcat-embed-core-10.1.28.jar:10.1.28]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.28.jar:10.1.28]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:101) ~[spring-web-6.1.12.jar:6.1.12]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164) ~[tomcat-embed-core-10.1.28.jar:10.1.28]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.28.jar:10.1.28]
+	at org.apache.catalina.core.ApplicationDispatcher.invoke(ApplicationDispatcher.java:632) ~[tomcat-embed-core-10.1.28.jar:10.1.28]
+	at org.apache.catalina.core.ApplicationDispatcher.processRequest(ApplicationDispatcher.java:410) ~[tomcat-embed-core-10.1.28.jar:10.1.28]
+	at org.apache.catalina.core.ApplicationDispatcher.doForward(ApplicationDispatcher.java:330) ~[tomcat-embed-core-10.1.28.jar:10.1.28]
+	at org.apache.catalina.core.ApplicationDispatcher.forward(ApplicationDispatcher.java:267) ~[tomcat-embed-core-10.1.28.jar:10.1.28]
+	at org.apache.catalina.core.StandardHostValve.custom(StandardHostValve.java:362) ~[tomcat-embed-core-10.1.28.jar:10.1.28]
+	at org.apache.catalina.core.StandardHostValve.status(StandardHostValve.java:222) ~[tomcat-embed-core-10.1.28.jar:10.1.28]
+	at org.apache.catalina.core.StandardHostValve.throwable(StandardHostValve.java:308) ~[tomcat-embed-core-10.1.28.jar:10.1.28]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:149) ~[tomcat-embed-core-10.1.28.jar:10.1.28]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93) ~[tomcat-embed-core-10.1.28.jar:10.1.28]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74) ~[tomcat-embed-core-10.1.28.jar:10.1.28]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:344) ~[tomcat-embed-core-10.1.28.jar:10.1.28]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:384) ~[tomcat-embed-core-10.1.28.jar:10.1.28]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63) ~[tomcat-embed-core-10.1.28.jar:10.1.28]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:904) ~[tomcat-embed-core-10.1.28.jar:10.1.28]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1741) ~[tomcat-embed-core-10.1.28.jar:10.1.28]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52) ~[tomcat-embed-core-10.1.28.jar:10.1.28]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1190) ~[tomcat-embed-core-10.1.28.jar:10.1.28]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659) ~[tomcat-embed-core-10.1.28.jar:10.1.28]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63) ~[tomcat-embed-core-10.1.28.jar:10.1.28]
+	at java.base/java.lang.Thread.run(Thread.java:833) ~[na:na]
+Caused by: java.lang.NullPointerException: Cannot invoke "org.springframework.web.multipart.MultipartFile.getContentType()" because "file" is null
+	at top.shy.springboot.filter_interceptor.interceptor.UploadInterceptor.preHandle(UploadInterceptor.java:40) ~[classes/:na]
+	at org.springframework.web.servlet.HandlerExecutionChain.applyPreHandle(HandlerExecutionChain.java:146) ~[spring-webmvc-6.1.12.jar:6.1.12]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1084) ~[spring-webmvc-6.1.12.jar:6.1.12]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:979) ~[spring-webmvc-6.1.12.jar:6.1.12]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1014) ~[spring-webmvc-6.1.12.jar:6.1.12]
+	... 36 common frames omitted
+
+2024-11-05T14:02:03.202+08:00  INFO 29276 --- [http-nio-8080-exec-6] t.s.s.f.interceptor.LoggingInterceptor   : 请求已经到达拦截器：path:/upload,clientIp=0:0:0:0:0:0:0:1,beginTime=2024-11-05T14:02:03.202670500
+2024-11-05T14:02:19.363+08:00  WARN 29276 --- [http-nio-8080-exec-7] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.web.multipart.MaxUploadSizeExceededException: Maximum upload size exceeded]
+2024-11-05T14:02:19.364+08:00  WARN 29276 --- [http-nio-8080-exec-7] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.web.multipart.MaxUploadSizeExceededException: Maximum upload size exceeded]
+2024-11-05T14:02:47.385+08:00  INFO 29276 --- [http-nio-8080-exec-10] t.s.s.f.interceptor.LoggingInterceptor   : 请求已经到达拦截器：path:/upload,clientIp=0:0:0:0:0:0:0:1,beginTime=2024-11-05T14:02:47.385618100
+2024-11-05T14:03:28.274+08:00  WARN 29276 --- [http-nio-8080-exec-9] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.web.multipart.MaxUploadSizeExceededException: Maximum upload size exceeded]
+2024-11-05T14:03:28.274+08:00  WARN 29276 --- [http-nio-8080-exec-9] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.web.multipart.MaxUploadSizeExceededException: Maximum upload size exceeded]
+2024-11-05T14:03:53.360+08:00  INFO 29276 --- [http-nio-8080-exec-2] t.s.s.f.interceptor.LoggingInterceptor   : 请求已经到达拦截器：path:/upload,clientIp=0:0:0:0:0:0:0:1,beginTime=2024-11-05T14:03:53.360695800
+2024-11-05T14:04:24.033+08:00  INFO 14324 --- [restartedMain] t.s.s.filter_interceptor.Application     : Starting Application using Java 17.0.4 with PID 14324 (E:\hou\spring-boot-pratice\spring-boot-filter-interceptor\target\classes started by 15331 in E:\hou\spring-boot-pratice)
+2024-11-05T14:04:24.036+08:00  INFO 14324 --- [restartedMain] t.s.s.filter_interceptor.Application     : No active profile set, falling back to 1 default profile: "default"
+2024-11-05T14:04:24.085+08:00  INFO 14324 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2024-11-05T14:04:24.085+08:00  INFO 14324 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2024-11-05T14:04:24.816+08:00  INFO 14324 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2024-11-05T14:04:24.826+08:00  INFO 14324 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-11-05T14:04:24.826+08:00  INFO 14324 --- [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.28]
+2024-11-05T14:04:24.867+08:00  INFO 14324 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-11-05T14:04:24.867+08:00  INFO 14324 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 781 ms
+2024-11-05T14:04:25.265+08:00  INFO 14324 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2024-11-05T14:04:25.293+08:00  INFO 14324 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2024-11-05T14:04:25.299+08:00  INFO 14324 --- [restartedMain] t.s.s.filter_interceptor.Application     : Started Application in 1.659 seconds (process running for 2.208)
+2024-11-05T14:04:32.280+08:00  INFO 14324 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-11-05T14:04:32.280+08:00  INFO 14324 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2024-11-05T14:04:32.281+08:00  INFO 14324 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2024-11-05T14:04:32.313+08:00  INFO 14324 --- [http-nio-8080-exec-1] t.s.s.f.interceptor.LoggingInterceptor   : 请求已经到达拦截器：path:/upload,clientIp=0:0:0:0:0:0:0:1,beginTime=2024-11-05T14:04:32.313165700
+2024-11-05T14:06:32.748+08:00  INFO 14324 --- [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (0 additions, 1 deletion, 0 modifications)
+2024-11-05T14:06:33.860+08:00  INFO 14324 --- [restartedMain] t.s.s.filter_interceptor.Application     : Starting Application using Java 17.0.4 with PID 14324 (E:\hou\spring-boot-pratice\spring-boot-filter-interceptor\target\classes started by 15331 in E:\hou\spring-boot-pratice)
+2024-11-05T14:06:33.860+08:00  INFO 14324 --- [restartedMain] t.s.s.filter_interceptor.Application     : No active profile set, falling back to 1 default profile: "default"
+2024-11-05T14:06:34.055+08:00  INFO 14324 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2024-11-05T14:06:34.056+08:00  INFO 14324 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-11-05T14:06:34.056+08:00  INFO 14324 --- [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.28]
+2024-11-05T14:06:34.077+08:00  INFO 14324 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-11-05T14:06:34.078+08:00  INFO 14324 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 215 ms
+2024-11-05T14:06:34.174+08:00  INFO 14324 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2024-11-05T14:06:34.187+08:00  INFO 14324 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2024-11-05T14:06:34.191+08:00  INFO 14324 --- [restartedMain] t.s.s.filter_interceptor.Application     : Started Application in 0.36 seconds (process running for 131.099)
+2024-11-05T14:06:34.192+08:00  INFO 14324 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2024-11-05T14:06:35.607+08:00  INFO 14324 --- [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (1 addition, 0 deletions, 0 modifications)
+2024-11-05T14:06:36.515+08:00  INFO 14324 --- [restartedMain] t.s.s.filter_interceptor.Application     : Starting Application using Java 17.0.4 with PID 14324 (E:\hou\spring-boot-pratice\spring-boot-filter-interceptor\target\classes started by 15331 in E:\hou\spring-boot-pratice)
+2024-11-05T14:06:36.516+08:00  INFO 14324 --- [restartedMain] t.s.s.filter_interceptor.Application     : No active profile set, falling back to 1 default profile: "default"
+2024-11-05T14:06:36.645+08:00  INFO 14324 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2024-11-05T14:06:36.645+08:00  INFO 14324 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-11-05T14:06:36.645+08:00  INFO 14324 --- [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.28]
+2024-11-05T14:06:36.660+08:00  INFO 14324 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-11-05T14:06:36.660+08:00  INFO 14324 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 142 ms
+2024-11-05T14:06:36.706+08:00  INFO 14324 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2024-11-05T14:06:36.713+08:00  INFO 14324 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2024-11-05T14:06:36.716+08:00  INFO 14324 --- [restartedMain] t.s.s.filter_interceptor.Application     : Started Application in 0.22 seconds (process running for 133.625)
+2024-11-05T14:06:36.717+08:00  INFO 14324 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2024-11-05T14:06:42.817+08:00  INFO 14324 --- [http-nio-8080-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-11-05T14:06:42.817+08:00  INFO 14324 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2024-11-05T14:06:42.818+08:00  INFO 14324 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2024-11-05T14:06:42.821+08:00  INFO 14324 --- [http-nio-8080-exec-2] t.s.s.f.interceptor.LoggingInterceptor   : 请求已经到达拦截器：path:/upload,clientIp=0:0:0:0:0:0:0:1,beginTime=2024-11-05T14:06:42.821581500
+2024-11-05T14:06:50.732+08:00  INFO 27960 --- [restartedMain] t.s.s.filter_interceptor.Application     : Starting Application using Java 17.0.4 with PID 27960 (E:\hou\spring-boot-pratice\spring-boot-filter-interceptor\target\classes started by 15331 in E:\hou\spring-boot-pratice)
+2024-11-05T14:06:50.734+08:00  INFO 27960 --- [restartedMain] t.s.s.filter_interceptor.Application     : No active profile set, falling back to 1 default profile: "default"
+2024-11-05T14:06:50.780+08:00  INFO 27960 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2024-11-05T14:06:50.780+08:00  INFO 27960 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2024-11-05T14:06:51.505+08:00  INFO 27960 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2024-11-05T14:06:51.516+08:00  INFO 27960 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-11-05T14:06:51.516+08:00  INFO 27960 --- [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.28]
+2024-11-05T14:06:51.557+08:00  INFO 27960 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-11-05T14:06:51.557+08:00  INFO 27960 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 776 ms
+2024-11-05T14:06:51.953+08:00  INFO 27960 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2024-11-05T14:06:51.981+08:00  INFO 27960 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2024-11-05T14:06:51.987+08:00  INFO 27960 --- [restartedMain] t.s.s.filter_interceptor.Application     : Started Application in 1.624 seconds (process running for 2.186)
+2024-11-05T14:07:05.992+08:00  INFO 27960 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-11-05T14:07:05.993+08:00  INFO 27960 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2024-11-05T14:07:05.993+08:00  INFO 27960 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 0 ms
+2024-11-05T14:07:06.026+08:00  INFO 27960 --- [http-nio-8080-exec-1] t.s.s.f.interceptor.LoggingInterceptor   : 请求已经到达拦截器：path:/upload,clientIp=0:0:0:0:0:0:0:1,beginTime=2024-11-05T14:07:06.026285300
+2024-11-05T14:07:19.825+08:00  INFO 27960 --- [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (0 additions, 1 deletion, 0 modifications)
+2024-11-05T14:07:20.857+08:00  INFO 27960 --- [restartedMain] t.s.s.filter_interceptor.Application     : Starting Application using Java 17.0.4 with PID 27960 (E:\hou\spring-boot-pratice\spring-boot-filter-interceptor\target\classes started by 15331 in E:\hou\spring-boot-pratice)
+2024-11-05T14:07:20.858+08:00  INFO 27960 --- [restartedMain] t.s.s.filter_interceptor.Application     : No active profile set, falling back to 1 default profile: "default"
+2024-11-05T14:07:21.000+08:00  INFO 27960 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2024-11-05T14:07:21.001+08:00  INFO 27960 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-11-05T14:07:21.001+08:00  INFO 27960 --- [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.28]
+2024-11-05T14:07:21.016+08:00  INFO 27960 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-11-05T14:07:21.017+08:00  INFO 27960 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 157 ms
+2024-11-05T14:07:21.084+08:00  INFO 27960 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2024-11-05T14:07:21.093+08:00  INFO 27960 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2024-11-05T14:07:21.096+08:00  INFO 27960 --- [restartedMain] t.s.s.filter_interceptor.Application     : Started Application in 0.261 seconds (process running for 31.295)
+2024-11-05T14:07:21.097+08:00  INFO 27960 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2024-11-05T14:07:22.534+08:00  INFO 27960 --- [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (1 addition, 0 deletions, 0 modifications)
+2024-11-05T14:07:23.447+08:00  INFO 27960 --- [restartedMain] t.s.s.filter_interceptor.Application     : Starting Application using Java 17.0.4 with PID 27960 (E:\hou\spring-boot-pratice\spring-boot-filter-interceptor\target\classes started by 15331 in E:\hou\spring-boot-pratice)
+2024-11-05T14:07:23.448+08:00  INFO 27960 --- [restartedMain] t.s.s.filter_interceptor.Application     : No active profile set, falling back to 1 default profile: "default"
+2024-11-05T14:07:23.625+08:00  INFO 27960 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2024-11-05T14:07:23.626+08:00  INFO 27960 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-11-05T14:07:23.626+08:00  INFO 27960 --- [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.28]
+2024-11-05T14:07:23.641+08:00  INFO 27960 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-11-05T14:07:23.642+08:00  INFO 27960 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 192 ms
+2024-11-05T14:07:23.714+08:00  INFO 27960 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2024-11-05T14:07:23.721+08:00  INFO 27960 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2024-11-05T14:07:23.724+08:00  INFO 27960 --- [restartedMain] t.s.s.filter_interceptor.Application     : Started Application in 0.295 seconds (process running for 33.923)
+2024-11-05T14:07:23.725+08:00  INFO 27960 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2024-11-05T14:08:32.807+08:00  INFO 37692 --- [restartedMain] t.s.s.filter_interceptor.Application     : Starting Application using Java 17.0.4 with PID 37692 (E:\hou\spring-boot-pratice\spring-boot-filter-interceptor\target\classes started by 15331 in E:\hou\spring-boot-pratice)
+2024-11-05T14:08:32.811+08:00  INFO 37692 --- [restartedMain] t.s.s.filter_interceptor.Application     : No active profile set, falling back to 1 default profile: "default"
+2024-11-05T14:08:32.874+08:00  INFO 37692 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2024-11-05T14:08:32.875+08:00  INFO 37692 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2024-11-05T14:08:33.634+08:00  INFO 37692 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2024-11-05T14:08:33.645+08:00  INFO 37692 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-11-05T14:08:33.645+08:00  INFO 37692 --- [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.28]
+2024-11-05T14:08:33.684+08:00  INFO 37692 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-11-05T14:08:33.685+08:00  INFO 37692 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 810 ms
+2024-11-05T14:08:34.091+08:00  INFO 37692 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2024-11-05T14:08:34.119+08:00  INFO 37692 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2024-11-05T14:08:34.125+08:00  INFO 37692 --- [restartedMain] t.s.s.filter_interceptor.Application     : Started Application in 1.766 seconds (process running for 2.313)
+2024-11-05T14:08:39.353+08:00  INFO 37692 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-11-05T14:08:39.354+08:00  INFO 37692 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2024-11-05T14:08:39.354+08:00  INFO 37692 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 0 ms
+2024-11-05T14:08:39.393+08:00  INFO 37692 --- [http-nio-8080-exec-1] t.s.s.f.interceptor.LoggingInterceptor   : 请求已经到达拦截器：path:/upload,clientIp=0:0:0:0:0:0:0:1,beginTime=2024-11-05T14:08:39.393338400
+2024-11-05T14:08:51.432+08:00  WARN 37692 --- [http-nio-8080-exec-3] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.web.multipart.MaxUploadSizeExceededException: Maximum upload size exceeded]
+2024-11-05T14:08:51.435+08:00  WARN 37692 --- [http-nio-8080-exec-3] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.web.multipart.MaxUploadSizeExceededException: Maximum upload size exceeded]
+2024-11-05T14:09:27.675+08:00  INFO 37692 --- [http-nio-8080-exec-6] t.s.s.f.interceptor.LoggingInterceptor   : 请求已经到达拦截器：path:/upload,clientIp=0:0:0:0:0:0:0:1,beginTime=2024-11-05T14:09:27.675709300
+2024-11-05T14:09:49.876+08:00  WARN 37692 --- [http-nio-8080-exec-5] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.web.multipart.MaxUploadSizeExceededException: Maximum upload size exceeded]
+2024-11-05T14:09:49.877+08:00  WARN 37692 --- [http-nio-8080-exec-5] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.web.multipart.MaxUploadSizeExceededException: Maximum upload size exceeded]
+2024-11-05T14:10:13.405+08:00  WARN 37692 --- [http-nio-8080-exec-8] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.web.multipart.MaxUploadSizeExceededException: Maximum upload size exceeded]
+2024-11-05T14:10:13.406+08:00  WARN 37692 --- [http-nio-8080-exec-8] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.web.multipart.MaxUploadSizeExceededException: Maximum upload size exceeded]
+2024-11-05T14:10:43.261+08:00  INFO 23388 --- [restartedMain] t.s.s.filter_interceptor.Application     : Starting Application using Java 17.0.4 with PID 23388 (E:\hou\spring-boot-pratice\spring-boot-filter-interceptor\target\classes started by 15331 in E:\hou\spring-boot-pratice)
+2024-11-05T14:10:43.264+08:00  INFO 23388 --- [restartedMain] t.s.s.filter_interceptor.Application     : No active profile set, falling back to 1 default profile: "default"
+2024-11-05T14:10:43.313+08:00  INFO 23388 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2024-11-05T14:10:43.313+08:00  INFO 23388 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2024-11-05T14:10:44.058+08:00  INFO 23388 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2024-11-05T14:10:44.067+08:00  INFO 23388 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-11-05T14:10:44.068+08:00  INFO 23388 --- [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.28]
+2024-11-05T14:10:44.107+08:00  INFO 23388 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-11-05T14:10:44.108+08:00  INFO 23388 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 794 ms
+2024-11-05T14:10:44.516+08:00  INFO 23388 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2024-11-05T14:10:44.542+08:00  INFO 23388 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2024-11-05T14:10:44.549+08:00  INFO 23388 --- [restartedMain] t.s.s.filter_interceptor.Application     : Started Application in 1.694 seconds (process running for 2.22)
+2024-11-05T14:10:53.275+08:00  INFO 23388 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-11-05T14:10:53.275+08:00  INFO 23388 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2024-11-05T14:10:53.276+08:00  INFO 23388 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 0 ms
+2024-11-05T14:10:53.311+08:00  INFO 23388 --- [http-nio-8080-exec-1] t.s.s.f.interceptor.LoggingInterceptor   : 请求已经到达拦截器：path:/upload,clientIp=0:0:0:0:0:0:0:1,beginTime=2024-11-05T14:10:53.311109500
+2024-11-05T14:11:37.685+08:00  INFO 23364 --- [restartedMain] t.s.s.filter_interceptor.Application     : Starting Application using Java 17.0.4 with PID 23364 (E:\hou\spring-boot-pratice\spring-boot-filter-interceptor\target\classes started by 15331 in E:\hou\spring-boot-pratice)
+2024-11-05T14:11:37.688+08:00  INFO 23364 --- [restartedMain] t.s.s.filter_interceptor.Application     : No active profile set, falling back to 1 default profile: "default"
+2024-11-05T14:11:37.737+08:00  INFO 23364 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2024-11-05T14:11:37.738+08:00  INFO 23364 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2024-11-05T14:11:38.450+08:00  INFO 23364 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2024-11-05T14:11:38.461+08:00  INFO 23364 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-11-05T14:11:38.461+08:00  INFO 23364 --- [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.28]
+2024-11-05T14:11:38.501+08:00  INFO 23364 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-11-05T14:11:38.501+08:00  INFO 23364 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 763 ms
+2024-11-05T14:11:38.915+08:00  INFO 23364 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2024-11-05T14:11:38.943+08:00  INFO 23364 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2024-11-05T14:11:38.950+08:00  INFO 23364 --- [restartedMain] t.s.s.filter_interceptor.Application     : Started Application in 1.645 seconds (process running for 2.168)
+2024-11-05T14:11:46.748+08:00  INFO 23364 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-11-05T14:11:46.748+08:00  INFO 23364 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2024-11-05T14:11:46.749+08:00  INFO 23364 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2024-11-05T14:11:46.787+08:00  INFO 23364 --- [http-nio-8080-exec-1] t.s.s.f.interceptor.LoggingInterceptor   : 请求已经到达拦截器：path:/upload,clientIp=0:0:0:0:0:0:0:1,beginTime=2024-11-05T14:11:46.787258100
+2024-11-05T14:12:07.287+08:00  INFO 23364 --- [http-nio-8080-exec-5] t.s.s.f.interceptor.LoggingInterceptor   : 请求已经到达拦截器：path:/upload,clientIp=0:0:0:0:0:0:0:1,beginTime=2024-11-05T14:12:07.287625
+2024-11-05T14:12:08.224+08:00  INFO 23364 --- [http-nio-8080-exec-5] t.s.s.f.interceptor.UploadInterceptor    : 拦截器响应处理完毕：path:/upload,endTime=2024-11-05T14:12:08.224237300
+2024-11-05T14:12:08.225+08:00  INFO 23364 --- [http-nio-8080-exec-5] t.s.s.f.interceptor.LoggingInterceptor   : 拦截器响应处理完毕：path:/upload,beginTime=2024-11-05T14:12:08.225240600
+2024-11-05T14:14:06.944+08:00  INFO 12232 --- [restartedMain] t.s.s.filter_interceptor.Application     : Starting Application using Java 17.0.4 with PID 12232 (E:\hou\spring-boot-pratice\spring-boot-filter-interceptor\target\classes started by 15331 in E:\hou\spring-boot-pratice)
+2024-11-05T14:14:06.947+08:00  INFO 12232 --- [restartedMain] t.s.s.filter_interceptor.Application     : No active profile set, falling back to 1 default profile: "default"
+2024-11-05T14:14:06.993+08:00  INFO 12232 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2024-11-05T14:14:06.993+08:00  INFO 12232 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2024-11-05T14:14:07.779+08:00  INFO 12232 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2024-11-05T14:14:07.790+08:00  INFO 12232 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-11-05T14:14:07.790+08:00  INFO 12232 --- [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.28]
+2024-11-05T14:14:07.829+08:00  INFO 12232 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-11-05T14:14:07.830+08:00  INFO 12232 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 836 ms
+2024-11-05T14:14:08.226+08:00  INFO 12232 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2024-11-05T14:14:08.251+08:00  INFO 12232 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2024-11-05T14:14:08.259+08:00  INFO 12232 --- [restartedMain] t.s.s.filter_interceptor.Application     : Started Application in 1.715 seconds (process running for 2.245)
+2024-11-05T14:14:19.608+08:00  INFO 12232 --- [http-nio-8080-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-11-05T14:14:19.608+08:00  INFO 12232 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2024-11-05T14:14:19.609+08:00  INFO 12232 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2024-11-05T14:14:19.650+08:00  INFO 12232 --- [http-nio-8080-exec-2] t.s.s.f.interceptor.LoggingInterceptor   : 请求已经到达拦截器：path:/upload,clientIp=0:0:0:0:0:0:0:1,beginTime=2024-11-05T14:14:19.650101300
+2024-11-05T14:14:20.211+08:00  INFO 12232 --- [http-nio-8080-exec-2] t.s.s.f.interceptor.UploadInterceptor    : 拦截器响应处理完毕：path:/upload,endTime=2024-11-05T14:14:20.211278900
+2024-11-05T14:14:20.211+08:00  INFO 12232 --- [http-nio-8080-exec-2] t.s.s.f.interceptor.LoggingInterceptor   : 拦截器响应处理完毕：path:/upload,beginTime=2024-11-05T14:14:20.211278900
+2024-11-05T14:14:54.379+08:00  INFO 12232 --- [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (0 additions, 1 deletion, 0 modifications)
+2024-11-05T14:14:55.489+08:00  INFO 12232 --- [restartedMain] t.s.s.filter_interceptor.Application     : Starting Application using Java 17.0.4 with PID 12232 (E:\hou\spring-boot-pratice\spring-boot-filter-interceptor\target\classes started by 15331 in E:\hou\spring-boot-pratice)
+2024-11-05T14:14:55.490+08:00  INFO 12232 --- [restartedMain] t.s.s.filter_interceptor.Application     : No active profile set, falling back to 1 default profile: "default"
+2024-11-05T14:14:55.704+08:00  INFO 12232 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2024-11-05T14:14:55.705+08:00  INFO 12232 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-11-05T14:14:55.706+08:00  INFO 12232 --- [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.28]
+2024-11-05T14:14:55.731+08:00  INFO 12232 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-11-05T14:14:55.731+08:00  INFO 12232 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 239 ms
+2024-11-05T14:14:55.817+08:00  INFO 12232 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2024-11-05T14:14:55.828+08:00  INFO 12232 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2024-11-05T14:14:55.832+08:00  INFO 12232 --- [restartedMain] t.s.s.filter_interceptor.Application     : Started Application in 0.371 seconds (process running for 49.817)
+2024-11-05T14:14:55.834+08:00  INFO 12232 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2024-11-05T14:14:57.241+08:00  INFO 12232 --- [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (1 addition, 0 deletions, 0 modifications)
+2024-11-05T14:14:58.142+08:00  INFO 12232 --- [restartedMain] t.s.s.filter_interceptor.Application     : Starting Application using Java 17.0.4 with PID 12232 (E:\hou\spring-boot-pratice\spring-boot-filter-interceptor\target\classes started by 15331 in E:\hou\spring-boot-pratice)
+2024-11-05T14:14:58.142+08:00  INFO 12232 --- [restartedMain] t.s.s.filter_interceptor.Application     : No active profile set, falling back to 1 default profile: "default"
+2024-11-05T14:14:58.260+08:00  INFO 12232 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2024-11-05T14:14:58.260+08:00  INFO 12232 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-11-05T14:14:58.260+08:00  INFO 12232 --- [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.28]
+2024-11-05T14:14:58.276+08:00  INFO 12232 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-11-05T14:14:58.276+08:00  INFO 12232 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 134 ms
+2024-11-05T14:14:58.326+08:00  INFO 12232 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2024-11-05T14:14:58.334+08:00  INFO 12232 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2024-11-05T14:14:58.337+08:00  INFO 12232 --- [restartedMain] t.s.s.filter_interceptor.Application     : Started Application in 0.218 seconds (process running for 52.322)
+2024-11-05T14:14:58.338+08:00  INFO 12232 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2024-11-05T14:15:17.664+08:00  INFO 12232 --- [http-nio-8080-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-11-05T14:15:17.664+08:00  INFO 12232 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2024-11-05T14:15:17.665+08:00  INFO 12232 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 0 ms
+2024-11-05T14:15:17.671+08:00  INFO 12232 --- [http-nio-8080-exec-2] t.s.s.f.interceptor.LoggingInterceptor   : 请求已经到达拦截器：path:/upload,clientIp=0:0:0:0:0:0:0:1,beginTime=2024-11-05T14:15:17.671168800
+2024-11-05T14:15:17.817+08:00  INFO 12232 --- [http-nio-8080-exec-2] t.s.s.f.interceptor.UploadInterceptor    : 拦截器响应处理完毕：path:/upload,endTime=2024-11-05T14:15:17.817869300
+2024-11-05T14:15:17.817+08:00  INFO 12232 --- [http-nio-8080-exec-2] t.s.s.f.interceptor.LoggingInterceptor   : 拦截器响应处理完毕：path:/upload,beginTime=2024-11-05T14:15:17.817869300
+2024-11-05T14:16:26.187+08:00  INFO 12232 --- [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (0 additions, 1 deletion, 0 modifications)
+2024-11-05T14:16:27.369+08:00  INFO 12232 --- [restartedMain] t.s.s.filter_interceptor.Application     : Starting Application using Java 17.0.4 with PID 12232 (E:\hou\spring-boot-pratice\spring-boot-filter-interceptor\target\classes started by 15331 in E:\hou\spring-boot-pratice)
+2024-11-05T14:16:27.369+08:00  INFO 12232 --- [restartedMain] t.s.s.filter_interceptor.Application     : No active profile set, falling back to 1 default profile: "default"
+2024-11-05T14:16:27.498+08:00  INFO 12232 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2024-11-05T14:16:27.498+08:00  INFO 12232 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-11-05T14:16:27.498+08:00  INFO 12232 --- [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.28]
+2024-11-05T14:16:27.513+08:00  INFO 12232 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-11-05T14:16:27.513+08:00  INFO 12232 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 141 ms
+2024-11-05T14:16:27.560+08:00  INFO 12232 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2024-11-05T14:16:27.572+08:00  INFO 12232 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2024-11-05T14:16:27.576+08:00  INFO 12232 --- [restartedMain] t.s.s.filter_interceptor.Application     : Started Application in 0.226 seconds (process running for 141.561)
+2024-11-05T14:16:27.577+08:00  INFO 12232 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2024-11-05T14:16:29.005+08:00  INFO 12232 --- [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (1 addition, 0 deletions, 0 modifications)
+2024-11-05T14:16:29.922+08:00  INFO 12232 --- [restartedMain] t.s.s.filter_interceptor.Application     : Starting Application using Java 17.0.4 with PID 12232 (E:\hou\spring-boot-pratice\spring-boot-filter-interceptor\target\classes started by 15331 in E:\hou\spring-boot-pratice)
+2024-11-05T14:16:29.923+08:00  INFO 12232 --- [restartedMain] t.s.s.filter_interceptor.Application     : No active profile set, falling back to 1 default profile: "default"
+2024-11-05T14:16:30.038+08:00  INFO 12232 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2024-11-05T14:16:30.038+08:00  INFO 12232 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-11-05T14:16:30.038+08:00  INFO 12232 --- [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.28]
+2024-11-05T14:16:30.052+08:00  INFO 12232 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-11-05T14:16:30.052+08:00  INFO 12232 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 128 ms
+2024-11-05T14:16:30.093+08:00  INFO 12232 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2024-11-05T14:16:30.099+08:00  INFO 12232 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2024-11-05T14:16:30.101+08:00  INFO 12232 --- [restartedMain] t.s.s.filter_interceptor.Application     : Started Application in 0.196 seconds (process running for 144.087)
+2024-11-05T14:16:30.102+08:00  INFO 12232 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2024-11-05T14:19:49.944+08:00  INFO 12232 --- [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (0 additions, 1 deletion, 0 modifications)
+2024-11-05T14:19:51.064+08:00  INFO 12232 --- [restartedMain] t.s.s.filter_interceptor.Application     : Starting Application using Java 17.0.4 with PID 12232 (E:\hou\spring-boot-pratice\spring-boot-filter-interceptor\target\classes started by 15331 in E:\hou\spring-boot-pratice)
+2024-11-05T14:19:51.064+08:00  INFO 12232 --- [restartedMain] t.s.s.filter_interceptor.Application     : No active profile set, falling back to 1 default profile: "default"
+2024-11-05T14:19:51.185+08:00  INFO 12232 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2024-11-05T14:19:51.186+08:00  INFO 12232 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-11-05T14:19:51.186+08:00  INFO 12232 --- [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.28]
+2024-11-05T14:19:51.200+08:00  INFO 12232 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-11-05T14:19:51.200+08:00  INFO 12232 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 134 ms
+2024-11-05T14:19:51.258+08:00  INFO 12232 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2024-11-05T14:19:51.267+08:00  INFO 12232 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2024-11-05T14:19:51.270+08:00  INFO 12232 --- [restartedMain] t.s.s.filter_interceptor.Application     : Started Application in 0.226 seconds (process running for 345.255)
+2024-11-05T14:19:51.271+08:00  INFO 12232 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2024-11-05T14:19:52.705+08:00  INFO 12232 --- [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (1 addition, 0 deletions, 0 modifications)
+2024-11-05T14:20:04.988+08:00  INFO 38840 --- [restartedMain] t.s.s.filter_interceptor.Application     : Starting Application using Java 17.0.4 with PID 38840 (E:\hou\spring-boot-pratice\spring-boot-filter-interceptor\target\classes started by 15331 in E:\hou\spring-boot-pratice)
+2024-11-05T14:20:04.992+08:00  INFO 38840 --- [restartedMain] t.s.s.filter_interceptor.Application     : No active profile set, falling back to 1 default profile: "default"
+2024-11-05T14:20:05.056+08:00  INFO 38840 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2024-11-05T14:20:05.056+08:00  INFO 38840 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2024-11-05T14:20:05.914+08:00  INFO 38840 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2024-11-05T14:20:05.927+08:00  INFO 38840 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-11-05T14:20:05.927+08:00  INFO 38840 --- [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.28]
+2024-11-05T14:20:05.973+08:00  INFO 38840 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-11-05T14:20:05.974+08:00  INFO 38840 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 917 ms
+2024-11-05T14:20:06.455+08:00  INFO 38840 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2024-11-05T14:20:06.490+08:00  INFO 38840 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2024-11-05T14:20:06.497+08:00  INFO 38840 --- [restartedMain] t.s.s.filter_interceptor.Application     : Started Application in 2.011 seconds (process running for 2.548)
+2024-11-05T14:20:32.194+08:00  INFO 38840 --- [http-nio-8080-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-11-05T14:20:32.194+08:00  INFO 38840 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2024-11-05T14:20:32.195+08:00  INFO 38840 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2024-11-05T14:20:32.231+08:00  INFO 38840 --- [http-nio-8080-exec-2] t.s.s.f.interceptor.LoggingInterceptor   : 请求已经到达拦截器：path:/upload,clientIp=0:0:0:0:0:0:0:1,beginTime=2024-11-05T14:20:32.231408800
+2024-11-05T14:20:40.655+08:00  INFO 38840 --- [http-nio-8080-exec-3] t.s.s.f.interceptor.LoggingInterceptor   : 请求已经到达拦截器：path:/upload,clientIp=0:0:0:0:0:0:0:1,beginTime=2024-11-05T14:20:40.655950200
+2024-11-05T14:20:54.097+08:00  INFO 38840 --- [http-nio-8080-exec-4] t.s.s.f.interceptor.LoggingInterceptor   : 请求已经到达拦截器：path:/upload,clientIp=0:0:0:0:0:0:0:1,beginTime=2024-11-05T14:20:54.097663800
+2024-11-05T14:21:01.421+08:00  INFO 38840 --- [http-nio-8080-exec-5] t.s.s.f.interceptor.LoggingInterceptor   : 请求已经到达拦截器：path:/upload,clientIp=0:0:0:0:0:0:0:1,beginTime=2024-11-05T14:21:01.421183
+2024-11-05T14:21:01.893+08:00  INFO 38840 --- [http-nio-8080-exec-5] t.s.s.f.interceptor.UploadInterceptor    : 拦截器响应处理完毕：path:/upload,endTime=2024-11-05T14:21:01.893915900
+2024-11-05T14:21:01.893+08:00  INFO 38840 --- [http-nio-8080-exec-5] t.s.s.f.interceptor.LoggingInterceptor   : 拦截器响应处理完毕：path:/upload,beginTime=2024-11-05T14:21:01.893915900

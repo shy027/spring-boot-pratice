@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="top.shy.springboot.qa.mapper.UserMapper">
+    <select id="loginByName" resultType="Boolean">
+        SELECT *
+        FROM user
+        WHERE name = #{name} AND password = #{password}
+    </select>
+    <insert id="insertUser" parameterType="top.shy.springboot.qa.entity.User">
+        INSERT INTO user (name,password)
+        VALUES (#{name},#{password})
+    </insert>
+    <select id="checkUserExists" resultType="Boolean">
+        SELECT COUNT(*) > 0 FROM user WHERE name = #{name}
+    </select>
+    <select id="selectByName" resultType="User">
+        SELECT *
+        FROM user
+        WHERE name = #{name}
+    </select>
+</mapper>
